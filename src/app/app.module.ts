@@ -3,18 +3,34 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
+
 import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
+
+import { AppRouterModule } from './app.router.module';
+import { HomeModule } from './home/home.module';
+import { MonitorInfoModule } from './monitorinfo/monitorinfo.module';
+import { TableModule } from './table/table.module';
+import { UserService } from './service/user.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent,
   ],
   imports: [
+    NgbModule.forRoot(),
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRouterModule,
+    HomeModule,
+    MonitorInfoModule,
+    TableModule
   ],
-  providers: [],
+  providers: [UserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

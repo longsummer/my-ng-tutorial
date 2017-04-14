@@ -1,0 +1,87 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <app-block title="虚拟化产品">
+            <div class="row">
+              <div class="col align-self-center">XenServer</div>
+            </div>
+            <div class="row">
+              <div class="col">{{productInfo.version}}</div>
+               <div class="col">{{productInfo.num}}</div>
+            </div>
+          </app-block>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <app-block title="存储">
+            <div class="row">
+              <div class="col">{{storageStatus.free}}</div>
+              <div class="col">空闲容量</div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <p><ngb-progressbar type="success" [value]="storageStatus.percentage"></ngb-progressbar></p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">使用容量：{{storageStatus.used}}</div>
+              <div class="col">总容量：{{storageStatus.total}}</div>
+            </div>
+          </app-block>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <app-block title="CPU使用率"></app-block>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <app-block title="内存使用率"></app-block>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <app-block title="虚拟机"></app-block>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <app-block title="主机"></app-block>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <app-block title="IOPS"></app-block>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <app-block title="吞吐率"></app-block>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="row">
+        <div class="col">
+          <app-block title="错误报警"></app-block>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <app-block title="警告报警"></app-block>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <app-block title="事件"></app-block>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

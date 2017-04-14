@@ -1,3 +1,32 @@
-<h1>
-  {{title}}
-</h1>
+<div class="row">
+  <div class="col">
+    <nav>
+      <a routerLink="home" class="nav-link" routerLinkActive="active">首页</a>
+      <a routerLink="monitorinfo/warninginfo" class="nav-link" routerLinkActive="active">监控信息</a>
+      <a href=""></a>
+    </nav>
+  </div>
+  <div class="col text-right">
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-link" id="configBtn" ngbDropdownToggle>设置</button>
+      <div class="dropdown-menu" aria-labelledby="configBtn">
+        <button class="dropdown-item">Action - 1</button>
+        <button class="dropdown-item">Another Action</button>
+        <button class="dropdown-item">Something else is here</button>
+      </div>
+    </div>
+    <div ngbDropdown class="d-inline-block">
+      <button class="btn btn-link" id="userBtn" ngbDropdownToggle>用户</button>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userBtn">
+        <button class="dropdown-item">Action - 1</button>
+        <button class="dropdown-item">Another Action</button>
+        <button class="dropdown-item">Something else is here</button>
+      </div>
+    </div>
+    <div class="d-inline-block" *ngIf="user">
+      <i>Welcome, {{user}}</i>
+    </div>
+  </div>
+</div>
+<router-outlet></router-outlet>
+
