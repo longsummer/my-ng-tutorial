@@ -8,6 +8,10 @@ import { UserService } from './service/user.service';
 })
 export class AppComponent {
   user = '';
+  configMenuItem = ['SMTP', 'NTP', 'NAS'];
+  configMenuButton = 'configMenu';
+  userMenuItem = ['用户管理', '修改密码', '退出登陆'];
+  userMenuButton = 'userMenu';
 
   constructor(userService: UserService) {
     this.user = userService.userName;

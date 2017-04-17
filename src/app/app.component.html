@@ -2,27 +2,13 @@
   <div class="col">
     <nav>
       <a routerLink="home" class="nav-link" routerLinkActive="active">首页</a>
-      <a routerLink="monitorinfo/warninginfo" class="nav-link" routerLinkActive="active">监控信息</a>
+      <a routerLink="monitorinfo" class="nav-link" routerLinkActive="active">监控信息</a>
       <a href=""></a>
     </nav>
   </div>
   <div class="col text-right">
-    <div ngbDropdown class="d-inline-block">
-      <button class="btn btn-link" id="configBtn" ngbDropdownToggle>设置</button>
-      <div class="dropdown-menu" aria-labelledby="configBtn">
-        <button class="dropdown-item">Action - 1</button>
-        <button class="dropdown-item">Another Action</button>
-        <button class="dropdown-item">Something else is here</button>
-      </div>
-    </div>
-    <div ngbDropdown class="d-inline-block">
-      <button class="btn btn-link" id="userBtn" ngbDropdownToggle>用户</button>
-      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userBtn">
-        <button class="dropdown-item">Action - 1</button>
-        <button class="dropdown-item">Another Action</button>
-        <button class="dropdown-item">Something else is here</button>
-      </div>
-    </div>
+    <app-dropdown-menu [menuItem]='configMenuItem' [menuButton]='configMenuButton'>设置</app-dropdown-menu>
+    <app-dropdown-menu [menuItem]='userMenuItem' [menuButton]='userMenuButton'>用户</app-dropdown-menu>
     <div class="d-inline-block" *ngIf="user">
       <i>Welcome, {{user}}</i>
     </div>

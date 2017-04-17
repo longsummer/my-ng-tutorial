@@ -1,0 +1,8 @@
+<div ngbDropdown class="d-inline-block">
+    <button class="btn btn-link" id="{{menuButton}}" ngbDropdownToggle>
+        <ng-content></ng-content>
+    </button>
+    <div class="dropdown-menu" [attr.aria-labelledby]="menuButton">
+        <button class="dropdown-item" *ngFor="let item of menuItem">{{item}}</button>
+    </div>
+</div>

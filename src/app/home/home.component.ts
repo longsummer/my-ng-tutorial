@@ -22,9 +22,8 @@ export class HomeComponent implements OnInit {
     apiService.getInfo(Api.HOME_STORAGE_STATUS).subscribe(
       (data: BaseResponse) => {
         this.storageStatus.parse(data);
-        console.log(this.storageStatus);
       }
-    )
+    );
   }
 
   ngOnInit() {

@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './monitorinfo.component.html',
   styleUrls: ['./monitorinfo.component.css']
 })
-export class MonitorinfoComponent implements OnInit {
+export class MonitorInfoComponent implements OnInit {
 
   constructor() { }
 
