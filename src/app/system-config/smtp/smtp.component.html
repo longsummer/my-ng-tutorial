@@ -1,0 +1,38 @@
+  <form [formGroup]="smtpForm" (ngSubmit)="onSubmit()">
+    <div style="margin-bottom: 1em">
+      <button type="submit"
+              [disabled]="smtpForm.status ==='INVALID'" class="btn btn-success">Save</button> &nbsp;
+      <button type="reset" (click)="revert()"
+              [disabled]="smtpForm.pristine" class="btn btn-danger">Revert</button>
+    </div>
+    <div class="form-group">
+      <label class="center-block">SMTP服务器:
+        <input class="form-control" formControlName="serviceAddr" (blur)="validate('serviceAddr')">
+      </label>
+      <div *ngIf="formErrors.serviceAddr.message && formErrors.serviceAddr.show" class="alert alert-danger">
+        {{ formErrors.serviceAddr.message }}
+      </div>
+      <label class="center-block">发送方地址:
+        <input class="form-control" formControlName="senderAddr" (blur)="validate('senderAddr')">
+      </label>
+      <div *ngIf="formErrors.senderAddr.message && formErrors.senderAddr.show" class="alert alert-danger">
+        {{ formErrors.senderAddr.message }}
+      </div>      
+    </div>
+    <div class="form-group">
+      <label class="center-block">发送方名称:
+        <input class="form-control" formControlName="senderName" (blur)="validate('senderName')">
+      </label>
+      <div *ngIf="formErrors.senderName.message && formErrors.senderName.show" class="alert alert-danger">
+        {{ formErrors.senderName.message }}
+      </div>         
+      <label class=center-block>发送方密码:
+        <input class="form-control" formControlName="senderPasswd" type="password" (blur)="validate('senderPasswd')">
+      </label>
+      <div *ngIf="formErrors.senderPasswd.message && formErrors.senderPasswd.show" class="alert alert-danger">
+        {{ formErrors.senderPasswd.message }}
+      </div>         
+    </div>
+  </form>
+  <p>smtpForm values: {{smtpForm.value | json}}</p>
+  <p>Form status: {{ smtpForm.status | json }}</p>

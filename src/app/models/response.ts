@@ -1,11 +1,11 @@
 import { Util } from '../util';
 
-class BaseResponse {
+export class BaseResponse {
     errno: number;
     result: any;
 }
 
-class ProductResponse {
+export class ProductResponse {
     private num: number;
     private version: string;
 
@@ -17,7 +17,7 @@ class ProductResponse {
     }
 }
 
-class StorageStatusResponse {
+export class StorageStatusResponse {
     total: string;
     used: string;
     free: string;
@@ -34,7 +34,7 @@ class StorageStatusResponse {
     }
 }
 
-class Warning {
+export class Warning {
     level: number;
     content: string;
     time: string;
@@ -44,7 +44,7 @@ class Warning {
     id: number;
 }
 
-class WarningInfoResponse {
+export class WarningInfoResponse {
     count: number;
     list: Array<Warning>;
 
@@ -57,4 +57,9 @@ class WarningInfoResponse {
     }
 }
 
-export { BaseResponse, ProductResponse, StorageStatusResponse, WarningInfoResponse };
+export class SmtpInfoResponse {
+    email: string;
+    smtp_addr: string;
+    smtp_passwd: string;
+    smtp_user: string;
+}

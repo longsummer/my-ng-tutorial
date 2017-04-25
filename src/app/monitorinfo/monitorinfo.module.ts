@@ -17,7 +17,7 @@ import { ApiServiceInjectables } from '../service/api.service';
         CommonModule,
         MonitorInfoRoutingModule,
         TableModule,
-        NgbModule.forRoot()
+        NgbModule
     ],
     declarations: [ WarningInfoComponent, EventInfoComponent, MonitorInfoComponent ],
     providers: [ ApiServiceInjectables ]

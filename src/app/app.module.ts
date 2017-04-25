@@ -14,6 +14,7 @@ import { ShareModule } from './share/share.module';
 import { AppRouterModule } from './app.router.module';
 import { HomeModule } from './home/home.module';
 import { MonitorInfoModule } from './monitorinfo/monitorinfo.module';
+import { SystemConfigModule } from './system-config/system-config.module';
 import { TableModule } from './table/table.module';
 import { UserService } from './service/user.service';
 
@@ -30,6 +31,7 @@ import { UserService } from './service/user.service';
     AppRouterModule,
     HomeModule,
     MonitorInfoModule,
+    SystemConfigModule,
     TableModule,
     ShareModule
   ],

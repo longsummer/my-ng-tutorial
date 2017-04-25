@@ -5,6 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'monitorinfo', loadChildren: 'app/monitorinfo/monitorinfo.module#MonitorInfoModule'},
+  {path: 'systemconfig', loadChildren: 'app/system-config/system-config.module#SystemConfigModule'}
 ];
 
 @NgModule({

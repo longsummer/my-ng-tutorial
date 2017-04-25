@@ -1,0 +1,113 @@
+<form #timeForm="ngForm" class="container-fluid" (ngSubmit)="onSubmit(timeForm)">
+  <div class="row">重复日期</div>
+  <div class="form-group row">   
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" [(ngModel)]="week.monday" name="monday">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">星期一</span>
+    </label>
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" [(ngModel)]="week.tuesday" name="tuesday">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">星期二</span>
+    </label>
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" [(ngModel)]="week.wensday" name="wensday">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">星期三</span>
+    </label>
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" [(ngModel)]="week.thursday" name="thursday">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">星期四</span>
+    </label>
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" [(ngModel)]="week.friday" name="friday">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">星期五</span>
+    </label>                        
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" [(ngModel)]="week.saturday" name="saturday">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">星期六</span>
+    </label>      
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" [(ngModel)]="week.sunday" name="sunday">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">星期日</span>
+    </label>
+    <label class="custom-control custom-checkbox">
+      <input type="checkbox" class="custom-control-input" [(ngModel)]="week.everyday" name="everyday">
+      <span class="custom-control-indicator"></span>
+      <span class="custom-control-description">每天</span>
+    </label>        
+  </div>
+  <div class="row">执行时间段</div>
+  <div class="form-group row">
+    <label>from</label>
+    <select name="fromHour" id="fromHour" class="custom-select" [(ngModel)]="time.fromHour" #spy>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+    </select>
+    <label>:</label>
+    <select name="fromMinuite" id="fromMinuite" class="custom-select" [(ngModel)]="time.fromMinuite">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+    </select>
+    <label>to</label>
+    <select name="toHour" id="toHour" class="custom-select" [(ngModel)]="time.toHour">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+    </select>
+    <label>:</label> 
+    <select name="toMinuite" id="toMinuite" class="custom-select" [(ngModel)]="time.toMinuite">
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+    </select>
+  </div>
+  <p>timeForm value: {{timeForm.value | json}}</p>
+  <button type="submit" class="btn btn-success" [disabled]="timeForm.pristine">确认</button>
+  <button type="reset" class="btn btn-danger" [disabled]="timeForm.pristine">重置</button>
+</form>
+
+

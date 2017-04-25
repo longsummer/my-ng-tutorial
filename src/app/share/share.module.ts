@@ -8,7 +8,7 @@ import { DropdownMenuComponent } from './downdown-menu/dropdown-menu.component';
 @NgModule({
   imports: [
     CommonModule,
-    NgbModule.forRoot()
+    NgbModule
   ],
   declarations: [ IterateObjectPipe, DropdownMenuComponent],
   exports: [ IterateObjectPipe, DropdownMenuComponent]
